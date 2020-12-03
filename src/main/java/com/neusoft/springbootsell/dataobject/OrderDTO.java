@@ -10,12 +10,13 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
-//订单主表
-@Entity
+
+//@Entity
 @Data
 @DynamicUpdate
-public class OrderMaster {
+public class OrderDTO {
 
     @Id
 //订单id
@@ -47,4 +48,7 @@ public class OrderMaster {
 
 //    更新时间
     private Date updateTime;
+
+    //订单详情列表
+    List<OrderDetail> orderDetailList;
 }

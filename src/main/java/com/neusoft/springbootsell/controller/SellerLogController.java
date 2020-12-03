@@ -17,23 +17,23 @@ import java.util.Map;
 @RequestMapping("/seller/log")
 public class SellerLogController {
     @Autowired
-    SellerService sellerService;
+    private SellerService sellerService;
 
     @GetMapping("/login")
     public ModelAndView login(@RequestParam("openId") String openId,
                               Map<String, Object> map){
 
-        try {
+//        try {
             SellerInfo sellerInfo = sellerService.findOne(openId);
             map.put("sellerInfo", sellerInfo);
 
-        } catch (Exception e) {
-            map.put("msg", e.getMessage());
-            map.put("url", "/seller/product/list");
-            return new ModelAndView("common/error");
-        }
-        map.put("url", "/seller/product/list");
-        return new ModelAndView("common/success", map);
+//        } catch (Exception e) {
+//            map.put("msg", e.getMessage());
+//            map.put("url", "/seller/product/list");
+//            return new ModelAndView("common/error");
+//        }
+//        map.put("url", "/seller/product/list");
+        return new ModelAndView("/log/login", map);
 
     }
 

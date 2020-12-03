@@ -65,9 +65,7 @@ public class SellerProductController {
         try {
             ProductInfo productInfo = productService.offSale(productId);
         } catch (Exception e) {
-            map.put("msg", e.getMessage());
-            map.put("url", "/seller/product/list");
-            return new ModelAndView("common/error");
+           return new ModelAndView("common/error");
         }
         map.put("url", "/seller/product/list");
         return new ModelAndView("common/success", map);

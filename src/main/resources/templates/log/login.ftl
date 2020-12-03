@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row clearfix">
                 <div class="col-md-12 column">
-                    <form role="form"  method="get" action="/seller/product/list">
+                    <form role="form"  method="get" action="/seller/log/login">
                         <div class="form-group">
                             <label for="exampleInputEmail1">name</label>
                             <input name="openId" type="text" class="form-control" value="${(SellerInfo.openId)!''}">
