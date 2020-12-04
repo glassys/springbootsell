@@ -2,6 +2,7 @@ package com.neusoft.springbootsell.dataobject;
 
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.Entity;
@@ -10,6 +11,7 @@ import java.util.Date;
 
 @Entity
 @Data
+@NoArgsConstructor
 @DynamicUpdate
 public class SellerInfo {
 
